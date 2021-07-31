@@ -77,6 +77,8 @@
 		67454C4F26B5628700365893 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		67454C5226B5628700365893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		67454C5426B5628700365893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67454C6026B5636D00365893 /* ShareApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareApp.entitlements; sourceTree = "<group>"; };
+		67454C6126B563A500365893 /* ShareExtensionApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtensionApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		67454C1526B5597A00365893 /* ShareApp */ = {
 			isa = PBXGroup;
 			children = (
+				67454C6026B5636D00365893 /* ShareApp.entitlements */,
 				67454C1626B5597A00365893 /* AppDelegate.swift */,
 				67454C1826B5597A00365893 /* SceneDelegate.swift */,
 				67454C1A26B5597A00365893 /* ViewController.swift */,
@@ -168,6 +171,7 @@
 		67454C4E26B5628700365893 /* ShareExtensionApp */ = {
 			isa = PBXGroup;
 			children = (
+				67454C6126B563A500365893 /* ShareExtensionApp.entitlements */,
 				67454C4F26B5628700365893 /* ShareViewController.swift */,
 				67454C5126B5628700365893 /* MainInterface.storyboard */,
 				67454C5426B5628700365893 /* Info.plist */,
@@ -536,6 +540,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ShareApp/ShareApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ShareApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -555,6 +560,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ShareApp/ShareApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ShareApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -651,6 +657,7 @@
 		67454C5926B5628700365893 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShareExtensionApp/ShareExtensionApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ShareExtensionApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -669,6 +676,7 @@
 		67454C5A26B5628700365893 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShareExtensionApp/ShareExtensionApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ShareExtensionApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
