@@ -14,6 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let pref = UserDefaults(suiteName: "group.com.developer.ShareApp.ShareExt")
+        pref?.setValue("12", forKey: "CheckData")
+        pref?.synchronize()
         return true
     }
 
