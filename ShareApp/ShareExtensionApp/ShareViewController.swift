@@ -41,18 +41,19 @@ class ShareViewController: SLComposeServiceViewController {
                     }
                     print("imageData Bytes:= ", image)
 //                    self?.save(imageData, key: "imageData", value: imageData)
+                    self?.completeExtentionRequest()
                 }
             } else if provider.hasItemConformingToTypeIdentifier(videoTypeConetent) { // Video Type Data
-                provider.loadItem(forTypeIdentifier: imageTypeContent, options: nil) { [unowned self] (data, error) in
+                provider.loadItem(forTypeIdentifier: videoTypeConetent, options: nil) { [unowned self] (data, error) in
                     guard error == nil else { return }
-                    
+                    print("secureCodingData := ", data)
+
                 }
             }
         }
         
-        self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
     }
-
+    
     override func configurationItems() -> [Any]! {
         // To add configuration options via table cells at the bottom of the sheet, return an array of SLComposeSheetConfigurationItem here.
         return []
@@ -63,7 +64,11 @@ class ShareViewController: SLComposeServiceViewController {
         guard let items = self.extensionContext?.inputItems else { return }
         print("items := ", items)
     }
-
+    private func completeExtentionRequest() {
+        /// This method should call to close this extension app
+        self.extensionContext?.completeRequest(returningItems: [], completionHandler: nil)
+    }
+    /// Save Data in user default
     private func save(_ data: Data, key: String, value: Any) {
       // You must use the userdefaults of an app group, otherwise the main app don't have access to it.
       let userDefaults = UserDefaults(suiteName: "com.developer.ShareApp")
