@@ -47,7 +47,13 @@ class ShareViewController: SLComposeServiceViewController {
                 provider.loadItem(forTypeIdentifier: videoTypeConetent, options: nil) { [unowned self] (data, error) in
                     guard error == nil else { return }
                     print("secureCodingData := ", data)
-
+                    var videoData:Data?
+                    if let someURl = data as? URL {
+                        videoData = try? Data(contentsOf: someURl)
+                    }else if let someData = data as? Data {
+                        videoData = someData
+                    }
+                    print("video Data Bytes:= ", videoData)
                 }
             }
         }
